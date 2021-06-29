@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+
+{% block title%}
+    Department {{ name }}
+{% endblock %}
+
+{% block content %}
+  <p>{{ name }}</p>
+<p>Average salary: {{ avSalary }}</p>
+    <p>-----------------------------------------</p>
+    {% for item in list %}
+    <div class="info_block">
+    <p>{{ item.name }}  {{ item.surname }}</p>
+    <p>Department: {{ item.department_id }}</p>
+    <p>Salary: {{ item.salary }}</p>
+    <p>Email: {{ item.email }}</p>
+    <p><a href="{{ url_for('views.emplInfo', id=item.id) }}">More info</a></p>
+    <p>--------------------------------------</p>
+    </div>
+{% endfor %}
+{% endblock %}

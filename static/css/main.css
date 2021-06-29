@@ -1,0 +1,31 @@
+.log{
+    background-color: white;
+    width: 50%;
+    margin: 30px auto 300px auto;
+    padding: 5% 2% 10% 2%;
+}
+
+.log2{
+    width: 80%;
+    padding: 10% 15% 10% 15%;
+}
+
+.log2 a{
+    text-align: center;
+    color: black;
+    margin-left: 60px;
+    text-decoration: none;
+}
+
+.log2 p {
+    margin-top: 15px;
+}
+
+.input100{
+    width: 200px;
+}
+
+.btn {
+    margin-top: 15px;
+    width: 200px;
+}

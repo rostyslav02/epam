@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+
+{% block title%}
+    Search
+{% endblock %}
+
+{% block content %}
+    <h2>Result of search</h2>
+    <h3>Employees</h3>
+    {% for item in employees %}
+    <div class="info_block">
+    <p>{{ item.name }}  {{ item.surname }}</p>
+    <p>Department: {{ item.department_id }}</p>
+    <p>Salary: {{ item.salary }}</p>
+    <p>Email: {{ item.email }}</p>
+    <p><a href="{{ url_for('views.emplInfo', id=item.id) }}">More info</a></p>
+    <p>--------------------------------------</p>
+    </div>
+{% endfor %}
+    <h3>Departments</h3>
+    {% for item in departs %}
+    <p>{{ item.name }}</p>
+    <p>Average salary: {{ item.salary }}</p>
+    <p><a href="{{ url_for('views.departInfo', id=item.id) }}">More info</a></p>
+      <p>----------------------------------------</p>
+{% endfor %}
+{% endblock %}

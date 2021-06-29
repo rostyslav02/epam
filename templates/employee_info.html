@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+
+{% block title%}
+    Employee {{ lst.name }}
+{% endblock %}
+
+{% block content %}
+    EMPLOYEE INFO
+
+<div class="empl">
+    <p>{{ lst.name }} {{ lst.surname }}</p>
+    <p>Department: </p>
+    <p>Salary: {{ lst.salary }}</p>
+    <p>E-mail: {{ lst.email }}</p>
+</div>
+
+{% endblock %}
